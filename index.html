@@ -1,0 +1,105 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <script type="text/javascript">
+            function sayHello() {
+               alert("Hello World Nick")
+            }
+      </script>
+
+      <script type="text/javascript">
+            function goToSub_domain() {
+               location.href = 'https://appier-subdomain.herokuapp.com/';
+            }
+      </script>
+
+      <script src="https://cdn.qgraph.io/dist/aiqua-wp.js"></script>
+      <script>
+        AIQUA.init({
+          appId: '643ddeb053c9ba0a75f5',
+          timeout: 5000
+        });
+      </script>
+
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MXZJ9XC');</script>
+      <!-- End Google Tag Manager -->
+
+   </head>
+   
+   <body>
+      <script type="text/javascript">
+            document.write("Hello World<br>")
+      </script>
+
+      <script type="text/javascript">
+            var time = new Date() 
+            document.write(time.getFullYear()) 
+      </script>
+
+      <script type="text/javascript">
+        !function(q,g,r,a,p,h,js) {
+          if(q.qg)return;
+          js = q.qg = function() {
+            js.callmethod ? js.callmethod.call(js, arguments) : js.queue.push(arguments);
+          };
+          js.queue = [];
+          p=g.createElement(r);p.async=!0;p.src=a;h=g.getElementsByTagName(r)[0];
+          h.parentNode.insertBefore(p,h);
+        } (window,document,'script','https://cdn.qgr.ph/qgraph.643ddeb053c9ba0a75f5.js');
+      </script>
+      
+
+      <!-- For checking Custom VAPID key pair -->
+<!--       <script type="text/javascript">
+        function urlB64ToUint8Array(base64String) {
+        const padding = '='.repeat((4 - base64String.length % 4) % 4);
+        const base64 = (base64String + padding)
+          .replace(/\-/g, '+')
+          .replace(/_/g, '/');
+       
+        const rawData = window.atob(base64);
+        const outputArray = new Uint8Array(rawData.length);
+       
+        for (let i = 0; i < rawData.length; ++i) {
+          outputArray[i] = rawData.charCodeAt(i);
+        }
+        return outputArray;
+      }
+       
+      var vapidPublicKey = "BDVtYU0Cd8TvTx_6NwJg8BlVYQB8Ca_Wmzq7mya3GmVKOb-6RYwOL3zt-k91D9v2nbrQ-SxYHvlx0w1vRd00_6E"
+      var applicationKey = urlB64ToUint8Array(vapidPublicKey)
+       
+      navigator.serviceWorker.register('qg-sw.643ddeb053c9ba0a75f5.js')
+        .then(function(reg) {
+          console.log('Service Worker Registered!', reg);
+          reg.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: applicationKey
+          })
+          .then(function(subscription) {
+            console.log('User is subscribed.', JSON.stringify(subscription.toJSON()));
+          });
+      });
+      </script>
+ -->
+
+      <input type="button" onclick="sayHello()" value="Say Hello" />
+      <input type="button" onclick="goToSub_domain()" value="Go to another sub-domain" />
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXZJ9XC"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+      <script type="text/javascript" id="">qg("event","product_viewed",{"product_id": "", "name": "From main domain"});</script>
+
+      <script type="text/javascript" id="">qg("identify", {"email": "myemail@somedomain.com", "ChineseName": "許霈峯堃珮"});</script>
+      
+      
+   </body>
+</html>
